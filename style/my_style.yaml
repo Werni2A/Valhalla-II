@@ -1,5 +1,5 @@
 # The name must be a single word
-name : wernberger
+name : style
 # Define the rules for this style
 rule :
   # Set Uppercase rules

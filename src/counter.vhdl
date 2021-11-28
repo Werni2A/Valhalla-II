@@ -16,19 +16,19 @@ architecture BEHAVIOUR of COUNTER is
 
 begin
 
-  COUNT : process (clk, rst) is
+  COUNT : process (CLK, RST) is
 
     variable tmp : unsigned(7 downto 0) := (others => '0');
 
   begin
 
-    if (rst = '0') then
+    if (RST = '0') then
       tmp := (others => '0');
-    elsif rising_edge(clk) then
+    elsif rising_edge(CLK) then
       tmp := tmp + 1;
     end if;
 
-    ctr <= std_logic_vector(tmp);
+    CTR <= std_logic_vector(tmp);
 
   end process COUNT;
 

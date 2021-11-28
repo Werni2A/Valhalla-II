@@ -42,13 +42,13 @@ begin
   LED7 <= led(7);
 
   -- Generate 500 mHz clock
-  PRESCALER : process (clk) is
+  PRESCALER : process (CLK) is
 
     variable timer : unsigned(23 downto 0) := (others => '0');
 
   begin
 
-    if rising_edge(clk) then
+    if rising_edge(CLK) then
       timer := timer + 1;
 
       if (timer = 3000000) then
