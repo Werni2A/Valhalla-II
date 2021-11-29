@@ -24,7 +24,9 @@ Main purpose of this repository is to quickly get you started without the hassle
 
 Most dependencies are provided by the Docker images, therefore you do not need to install them yourself.
 
-- Optional: [VSG](https://github.com/jeremiah-c-leary/vhdl-style-guide) for VHDL code formatting
+- Required: `sudo apt install build-essential` for Make
+- Required: `sudo apt install podman` or Docker alternatively to Podman
+- Optional: `python3 -m pip install vsg` [VSG](https://github.com/jeremiah-c-leary/vhdl-style-guide) for VHDL code formatting
 
 # Thanks
 
