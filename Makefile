@@ -41,7 +41,7 @@ build/$(PROJ).bit: build/$(PROJ).asc
 	$(ICEPACK) $< $@
 
 report: build/$(PROJ).asc
-	$(ICETIME) -d $(DEVICE) -p $(PIN_DEF) -P $(PACKAGE) -mtr build/timing.txt $@
+	$(ICETIME) -d $(DEVICE) -p $(PIN_DEF) -P $(PACKAGE) -mtr build/timing.txt $<
 
 prog: build/$(PROJ).bit
 	# $(ICEPROG) -d i:0x0403:0x6010:0 $<
@@ -49,7 +49,7 @@ prog: build/$(PROJ).bit
 
 clean:
 	rm -rf build
-	rm work-obj*.cf
+	rm -f work-obj*.cf
 
 format: $(SRC)
 	vsg -f $^ -c $(STYLE) --fix
