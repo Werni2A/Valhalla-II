@@ -9,7 +9,7 @@ Main purpose of this repository is to quickly get you started without the hassle
 
 1. Clone this repository
 2. Connect your Alhambra II board via the USB port (use the one marked with `PC` on the PCB) with your computer
-3. Start a terminal within this repository
+3. Start a terminal within this repository (it might be required to run `sudo -i` on Linux, in case you experience issues accessing the USB)
 4. Call `make prog` which generates the ICE40 bitstream for the exemplary counter in `src` and programs your Alhambra II board.
 5. Take a look at your development board, that shows the state of a binary counter on the board's LEDs, counting up every 500 ms.
 
@@ -17,8 +17,8 @@ Main purpose of this repository is to quickly get you started without the hassle
 
 - `make` Generates the ICE40 bitstream (runs synthesis, place and rout, and bitstream generation)
 - `make prog` Generates the bitstream and programs the device, when connected via USB
-- `make clean` removes `build` folder of the design
-- `./format.sh` Optimizes the style of the VHDL code
+- `make clean` Removes `build` folder of the design
+- `make format` Optimizes the style of the VHDL code
 
 # Dependencies
 
