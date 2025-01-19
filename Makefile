@@ -5,14 +5,14 @@ DOCKER = podman
 
 DOCKERARGS = run --rm -v /"$(PWD)"://wrk -w //wrk
 
-GHDL           = $(DOCKER) $(DOCKERARGS) gcr.io/hdl-containers/ghdl:latest ghdl
+GHDL           = $(DOCKER) $(DOCKERARGS) docker.io/hdlc/ghdl:yosys ghdl
 GHDLSYNTH      = ghdl
-YOSYS          = $(DOCKER) $(DOCKERARGS) gcr.io/hdl-containers/ghdl/yosys:latest yosys
-NEXTPNR        = $(DOCKER) $(DOCKERARGS) gcr.io/hdl-containers/nextpnr/ice40:latest nextpnr-ice40
-ICEPACK        = $(DOCKER) $(DOCKERARGS) gcr.io/hdl-containers/icestorm:latest icepack
-ICETIME        = $(DOCKER) $(DOCKERARGS) gcr.io/hdl-containers/icestorm:latest icetime
-ICEPROG        = $(DOCKER) $(DOCKERARGS) --device /dev/bus/usb gcr.io/hdl-containers/prog:latest iceprog
-OPENFPGALOADER = $(DOCKER) $(DOCKERARGS) --device /dev/bus/usb gcr.io/hdl-containers/openfpgaloader:latest openFPGALoader
+YOSYS          = $(DOCKER) $(DOCKERARGS) docker.io/hdlc/ghdl:yosys yosys
+NEXTPNR        = $(DOCKER) $(DOCKERARGS) docker.io/hdlc/nextpnr:ice40 nextpnr-ice40
+ICEPACK        = $(DOCKER) $(DOCKERARGS) docker.io/hdlc/icestorm:latest icepack
+ICETIME        = $(DOCKER) $(DOCKERARGS) docker.io/hdlc/icestorm:latest icetime
+ICEPROG        = $(DOCKER) $(DOCKERARGS) --device /dev/bus/usb docker.io/hdlc/prog:latest iceprog
+OPENFPGALOADER = $(DOCKER) $(DOCKERARGS) --device /dev/bus/usb docker.io/hdlc/openfpgaloader:latest openFPGALoader
 
 # Parameters
 PROJ ?= counter
