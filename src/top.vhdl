@@ -12,7 +12,8 @@ entity TOP is
     LED4 : out   std_logic;
     LED5 : out   std_logic;
     LED6 : out   std_logic;
-    LED7 : out   std_logic
+    LED7 : out   std_logic;
+    SW1  : in    std_logic
   );
 end entity TOP;
 
@@ -62,7 +63,7 @@ begin
   COUNTER_INST : component COUNTER
     port map (
       CLK => clk_500_mhz,
-      RST => '1',
+      RST => not SW1,
       CTR => led
     );
 
