@@ -45,7 +45,7 @@ report: build/$(PROJ).asc
 
 prog: build/$(PROJ).bit
 	# $(ICEPROG) -d i:0x0403:0x6010:0 $<
-	$(OPENFPGALOADER) --verify --board ice40_generic $<
+	$(OPENFPGALOADER) --board ice40_generic $<
 
 clean:
 	rm -rf build
